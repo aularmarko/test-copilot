@@ -1,9 +1,9 @@
-# The manifest for the "pipeline-prueba-copilot-test-copilot" pipeline.
+# The manifest for the "pipeline-visit-test-copilot" pipeline.
 # This YAML file defines your pipeline: the source repository it tracks and the order of the environments to deploy to.
 # For more info: https://aws.github.io/copilot-cli/docs/manifest/pipeline/
 
 # The name of the pipeline.
-name: pipeline-prueba-copilot-test-copilot
+name: pipeline-visit-test-copilot
 
 # The version of the schema used in this template.
 version: 1
@@ -24,6 +24,13 @@ source:
 stages:
     - # The name of the environment.
       name: test
+      # Optional: flag for manual approval action before deployment.
+      # requires_approval: true
+      # Optional: use test commands to validate this stage of your build.
+      # test_commands: [echo 'running tests', make test]
+
+    - # The name of the environment.
+      name: prod
       # Optional: flag for manual approval action before deployment.
       # requires_approval: true
       # Optional: use test commands to validate this stage of your build.
